@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Quest | Learn the Democracy</title>
+    <meta name="description" content="Interactive 3D game to learn the election process in India and the Education system.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <h1>ELECTION QUEST</h1>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="container">
+                    <h1 class="reveal-text">Democracy in <span class="gradient-text">Action</span></h1>
+                    <p class="subtitle">Master the art of elections through an immersive 3D journey.</p>
+                    <div class="scroll-indicator">
+                        <span>Scroll to Explore</span>
+                        <div class="mouse"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Section -->
+            <section class="categories" id="categories">
+                <div class="container">
+                    <h2 class="section-title">Choose Your Path</h2>
+                    <div class="cards-wrapper">
+                        <div class="card" id="card-indian">
+                            <div class="card-inner">
+                                <div class="card-icon">🇮🇳</div>
+                                <h3>Indian National System</h3>
+                                <p>Learn about General Elections, Voter ID, and the path to Parliament.</p>
+                                <button class="btn-primary">Enter National Path</button>
+                            </div>
+                        </div>
+                        <div class="card" id="card-education">
+                            <div class="card-inner">
+                                <div class="card-icon">🎓</div>
+                                <h3>Education System</h3>
+                                <p>From Class Representative to Student Council. How schools vote.</p>
+                                <button class="btn-secondary">Enter Student Path</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section (Dynamic) -->
+            <section class="process-steps" id="process">
+                <div class="container" id="steps-container">
+                    <div class="placeholder-content" style="text-align: center; padding: 100px 0;">
+                        <h2 style="opacity: 0.5;">Select a path above to start your journey!</h2>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container" style="padding: 50px 0; border-top: 1px solid var(--glass-border); text-align: center;">
+                    <p>&copy; 2026 Election Quest | Interactive Learning</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Chatbot UI -->
+    <div id="chatbot-trigger">
+        <div class="bot-icon">💬</div>
+    </div>
+
+    <div id="chatbot-window" class="hidden">
+        <div class="chat-header">
+            <h3>Politi-Bot</h3>
+            <button id="close-chat" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">&times;</button>
+        </div>
+        <div id="chat-messages">
+            <div class="message bot">Hello! I'm Politi-Bot. Ask me anything about the election process!</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type your question...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
